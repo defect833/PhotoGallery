@@ -26,7 +26,8 @@ namespace PhotoGallery
         public static IWebHost BuildWebHost(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
-                .UseKestrel(a => a.AddServerHeader = false)
+                //.UseKestrel(a => a.AddServerHeader = false)
+                .UseIISIntegration()
                 .Build();
 
         public IConfiguration Configuration { get; }
