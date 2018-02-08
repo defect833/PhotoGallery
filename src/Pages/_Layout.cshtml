@@ -23,7 +23,7 @@
             <div class="container" itemscope itemprop="itemListElement" itemtype="http://schema.org/ListItem">
                 <h1>
                     <a href="~/" title="Back to the home page" itemscope itemtype="http://schema.org/Thing" itemprop="item">
-                        <span itemprop="name">My Photo Gallery</span>
+                        <span itemprop="name">Alex &amp; Ali - Photo Gallery</span>
                     </a>
                 </h1>
                 <meta itemprop="position" content="1" />
@@ -32,13 +32,12 @@
 
         <main class="container">
             @RenderBody()
-            @{await Html.RenderPartialAsync("_SocialButtons.cshtml", ViewData["Title"]);}
+            @*@{await Html.RenderPartialAsync("_SocialButtons.cshtml", ViewData["Title"]);}*@
         </main>
     </div>
 
     <footer>
         <p class="container">
-            Fork me on <a href="https://github.com/madskristensen/PhotoGallery" rel="noreferrer noopener" title="See the source code">GitHub</a>
             @{await Html.RenderPartialAsync("_LoginButton.cshtml");}
         </p>
     </footer>
