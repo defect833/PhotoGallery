@@ -14,4 +14,10 @@
         <PackageReference Include="SkiaSharp" Version="1.59.2" />
         <PackageReference Include="WebEssentials.AspNetCore.CdnTagHelpers" Version="1.0.15" />
     </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="wwwroot\js\site.js">
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      </Content>
+    </ItemGroup>
 </Project>
