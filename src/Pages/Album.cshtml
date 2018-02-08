@@ -6,13 +6,13 @@
     ViewData["Image"] = Request.Scheme + "://" + Request.Host + Model.Album.CoverPhoto?.GetThumbnailLink((int)ImageType.Full, out int h);
 }
 
-<div id="admin" if-authorized>
+<div id="admin">
     <form method="post" enctype="multipart/form-data">
         <input type="file" id="files" aria-label="Upload photo" name="files" required multiple accept="image/*" />
         <input type="submit" asp-page-handler="upload" data-progress="Uploading..." id="btnfiles" value="Upload photos" />
     </form>
 
-    <form method="post" class="delete">
+    <form method="post" class="delete" if-authorized>
         <input type="submit" asp-page-handler="delete" id="deletealbum" aria-label="Delete album..." title="Delete album..." value="X" />
     </form>
 </div>
@@ -37,11 +37,13 @@
 </div>
 
 @section scripts {
-    <script if-authorized src="/js/admin.js" async></script>
+    @*<script if-authorized src="/js/admin.js" async></script>*@
+    <script src="/js/admin.js" async></script>
 }
 
 @section head {
-    <link if-authorized rel="stylesheet" href="/css/admin.scss" />
+    @*<link if-authorized rel="stylesheet" href="/css/admin.scss" />*@
+    <link rel="stylesheet" href="/css/admin.scss" />
     @if (Model.Album.Next != null)
     {
         <link rel="next" href="@Model.Album.Next.Link" />
