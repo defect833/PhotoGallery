@@ -17,6 +17,7 @@ body {
     padding: 0;
     color: $body-color;
     background-color: $body-bgcolor;
+    background: repeating-linear-gradient(-45deg, #fff3ee, #fff3ee 15px, $body-bgcolor 15px, $body-bgcolor 30px);
     font: 16px/1.4 "trebuchet ms", palatino, tahoma, sans-serif;
 }
 
@@ -31,6 +32,8 @@ header {
     margin: 0 0 20px 0;
     padding: 0;
     background-color: $header-bgcolor;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
 
     h1 {
         margin: 0;
