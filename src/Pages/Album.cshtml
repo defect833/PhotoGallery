@@ -37,13 +37,11 @@
 </div>
 
 @section scripts {
-    @*<script if-authorized src="/js/admin.js" async></script>*@
-    <script src="/js/admin.js" async></script>
+    <script if-authorized src="/js/admin.js" async></script>
 }
 
 @section head {
-    @*<link if-authorized rel="stylesheet" href="/css/admin.scss" />*@
-    <link rel="stylesheet" href="/css/admin.scss" />
+    <link if-authorized rel="stylesheet" href="/css/admin.scss" />
     @if (Model.Album.Next != null)
     {
         <link rel="next" href="@Model.Album.Next.Link" />
