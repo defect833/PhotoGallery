@@ -16,6 +16,10 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="wwwroot\albums\" />
+    </ItemGroup>
+
+    <ItemGroup>
       <Content Update="wwwroot\js\site.js">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </Content>
